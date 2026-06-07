@@ -3,7 +3,7 @@ const router = express.Router();
 
 const estoqueController = require('../controller/estoqueController');
 
-router.get("/teste", (req, res) => {
+router.get("/", (req, res) => {
     res.json({ mensagem: "A rota /api/teste está funcionando perfeitamente no Render!" });
 });
 

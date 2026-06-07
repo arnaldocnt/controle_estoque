@@ -5,7 +5,7 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 
-const rotaEstoque = require('./src/route/estoqueRoute');
+const rotaEstoque = require('./route/estoqueRoute');
 // const rotaUsuario = require('./src/route/usuarioRoute');
 
 app.use('/api', rotaEstoque);
