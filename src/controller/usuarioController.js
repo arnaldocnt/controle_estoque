@@ -2,7 +2,7 @@ const db = require('../config/database');
 
 exports.listarUsuario = async (req, res) => {
     try {
-        const listarUsuario = await db.query(`SELECT * FROM produtos`);
+        const listarUsuario = await db.query(`SELECT * FROM usuarios`);
         res.json(listarUsuario.rows);
         console.log("Produtos listados com sucesso!");
     } catch (error) {
