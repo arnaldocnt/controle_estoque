@@ -14,7 +14,7 @@ exports.listarUsuario = async (req, res) => {
 exports.buscarUsuario = async (req, res) => {
     try {
         const idUsuario = req.params.id;
-        const buscarUsuario = await db.query(`SELECT * FROM usuarios WHERE id = $1`, [buscarUsuario]);
+        const buscarUsuario = await db.query(`SELECT * FROM usuarios WHERE id = $1`, [idUsuario]);
         res.json(buscarUsuario.rows[0]);
     } catch (error) {
         console.error("Erro encontrado:", error);
