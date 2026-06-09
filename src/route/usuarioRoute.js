@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
 
 router.get("/usuario", usuarioController.listarUsuario);
 router.get("/usuario/:id", usuarioController.buscarUsuario);
-// router.put("/usuario/:id", usuarioController.atualizarProduto);
+router.put("/usuario/:id", usuarioController.atualizarProduto);
 router.post("/usuario", usuarioController.criarProduto);
 
 module.exports = router;
