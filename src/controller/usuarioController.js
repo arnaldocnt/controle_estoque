@@ -23,23 +23,23 @@ exports.buscarUsuario = async (req, res) => {
 };
 
 // exports.criarUsuario = async (req, res) => {
-    try {
-        const { lote, produto, descricao_produto, quantidade, preco, curva, data_compra, data_venda } = req.body;
-        const novoProduto = `INSERT INTO produtos (lote, produto, descricao_produto, quantidade, preco, curva, data_compra, data_venda)
-        VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
-        RETURNING *
-        `; 
+//     try {
+//         const { lote, produto, descricao_produto, quantidade, preco, curva, data_compra, data_venda } = req.body;
+//         const novoProduto = `INSERT INTO produtos (lote, produto, descricao_produto, quantidade, preco, curva, data_compra, data_venda)
+//         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+//         RETURNING *
+//         `; 
 
-        const valores = [lote, produto, descricao_produto, quantidade, preco, curva, data_compra, data_venda];
+//         const valores = [lote, produto, descricao_produto, quantidade, preco, curva, data_compra, data_venda];
 
-        const criacao = await db.query(novoProduto, valores);
-        const produtoCriado = (criacao.rows[0]);
-        res.status(201).json(produtoCriado);
+//         const criacao = await db.query(novoProduto, valores);
+//         const produtoCriado = (criacao.rows[0]);
+//         res.status(201).json(produtoCriado);
 
-    } catch (error) {
-        console.error("Erro ao cadastrar produto:", error);
-        return res.status(500).json({ erro: "Erro interno ao salvar o produto no banco de dados." });
-    };
+//     } catch (error) {
+//         console.error("Erro ao cadastrar produto:", error);
+//         return res.status(500).json({ erro: "Erro interno ao salvar o produto no banco de dados." });
+//     };
 // };
 
 // exports.atualizarProduto = async (req, res) => {
