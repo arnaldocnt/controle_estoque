@@ -12,4 +12,5 @@ router.get("/estoque/:id", estoqueController.buscarProduto);
 router.put("/estoque/:id", estoqueController.atualizarProduto);
 router.post("/estoque", estoqueController.criarProduto);
 
+
 module.exports = router;
